@@ -290,7 +290,7 @@ function updateCart() {
     }
 
     if (whatsappLink) {
-        whatsappLink.href = `https://wa.me/9779801915577?text=${messageText}`;
+        whatsappLink.href = `https://wa.me/9779746821625?text=${messageText}`;
         whatsappLink.onclick = () => {
             trackAnalyticsEvent("E-commerce", "WhatsApp Checkout Submit", `Grand Total: Rs. ${total}`);
         };
