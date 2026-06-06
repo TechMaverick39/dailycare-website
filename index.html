@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Care Hub Nepal - Quality Personal Care & Hygiene Products</title>
+  
+  <meta name="description" content="Shop medical grade face masks, premium baby diapers, sanitary pads, and daily hygiene kits at Daily Care Hub Nepal. Reliable, fast, and easy WhatsApp ordering.">
+  <meta name="keywords" content="Daily Care Hub Nepal, Hygiene Kit, Face Mask, Baby Diapers, Sanitary Pads, Nepal Shopping, Personal Care">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dailycarenepal.com/">
+  <meta property="og:title" content="Daily Care Hub Nepal - Quality Personal Care & Hygiene">
+  <meta property="og:description" content="Get premium medical grade face masks, soft baby diapers, sanitary pads, and hygiene kits delivered to your doorstep. Order fast via WhatsApp.">
+  <meta property="og:image" content="https://dailycarenepal.com/images/imageshero.jpg.jpeg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://dailycarenepal.com/">
+  <meta property="twitter:title" content="Daily Care Hub Nepal - Quality Personal Care & Hygiene">
+  <meta property="twitter:description" content="Get premium medical grade face masks, soft baby diapers, sanitary pads, and hygiene kits delivered to your doorstep. Order fast via WhatsApp.">
+  <meta property="twitter:image" content="https://dailycarenepal.com/images/imageshero.jpg.jpeg">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ANALYTICS TEMPLATES -->
+  <!-- Google Analytics Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script>
+  
+  <!-- Microsoft Clarity Tracking Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","xxxxxxxxxx");
+  </script>
+</head>
+<body>
+
+  <!-- BACKDROP FOR DRAWER -->
+  <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <h2 class="logo">Daily<span>Care</span></h2>
+      <nav id="menu">
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#products" onclick="toggleMenu()">Products</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </nav>
+      <div class="nav-controls">
+        <div class="cart-btn" onclick="toggleCart()" aria-label="Open Shopping Cart" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){toggleCart();event.preventDefault();}">
+          <svg class="icon-cart" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm1.75-2.25L5.2 7H3V5h3.27l.93 2h11.95c.55 0 1 .45 1 1 0 .09-.01.18-.04.27l-3.58 6.47c-.38.68-1.1 1.1-1.88 1.1H8.75z"/>
+          </svg>
+          <span id="cart-count" aria-live="polite">0</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="glass fade">
+      <h1 class="hero-title">Simplify Your Daily Needs</h1>
+      <p class="hero-tagline">Smart, reliable, and fast health & hygiene solutions with DailyCare.</p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN SHOPPING CONTENT -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-header fade">
+        <h2>Our Products</h2>
+        <p>Handpicked essentials for your family's health and comfort</p>
+      </div>
+
+      <!-- FILTER & SEARCH BAR -->
+      <div class="shop-controls fade">
+        <div class="category-filters" role="tablist" aria-label="Product categories">
+          <button class="filter-btn active" role="tab" aria-selected="true" onclick="filterCategory('all')">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" onclick="filterCategory('hygiene')">Hygiene</button>
+          <button class="filter-btn" role="tab" aria-selected="false" onclick="filterCategory('baby')">Baby Care</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search products..." onkeyup="searchProducts()" aria-label="Search products by name">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="grid fade" id="product-grid">
+
+        <!-- FACE MASK -->
+        <div class="card" data-category="hygiene" data-name="face mask">
+          <div class="card-img-wrapper">
+            <img src="images/imagesproduct1.jpg.jpeg" alt="Box of medical grade disposable 3-ply face masks" loading="lazy">
+          </div>
+          <div class="card-info">
+            <span class="category-tag">Hygiene</span>
+            <h3>Face Mask</h3>
+            <p class="price">Rs. 200</p>
+            <button class="btn btn-secondary" aria-label="View Face Mask details" onclick="openPopup(
+              'Face Mask',
+              'images/imagesproduct1.jpg.jpeg',
+              200,
+              '50 pieces per box | 3-ply | Disposable | Medical grade'
+            )">View Details</button>
+          </div>
+        </div>
+
+        <!-- BABY DIAPER -->
+        <div class="card" data-category="baby" data-name="baby diapers">
+          <div class="card-img-wrapper">
+            <img src="images/imagesproduct2.jpg.jpeg" alt="Pack of ultra soft high absorbency leak proof baby diapers" loading="lazy">
+          </div>
+          <div class="card-info">
+            <span class="category-tag">Baby Care</span>
+            <h3>Baby Diapers</h3>
+            <p class="price">Rs. 500</p>
+            <button class="btn btn-secondary" aria-label="View Baby Diapers details" onclick="openPopup(
+              'Baby Diapers',
+              'images/imagesproduct2.jpg.jpeg',
+              500,
+              '30 pieces pack | Ultra soft | High absorbency | Leak proof'
+            )">View Details</button>
+          </div>
+        </div>
+
+        <!-- SANITARY PAD -->
+        <div class="card" data-category="hygiene" data-name="sanitary pads">
+          <div class="card-img-wrapper">
+            <img src="images/imagesproduct4.jpg.jpeg" alt="Pack of skin friendly ultra comfort sanitary pads" loading="lazy">
+          </div>
+          <div class="card-info">
+            <span class="category-tag">Hygiene</span>
+            <h3>Sanitary Pads</h3>
+            <p class="price">Rs. 300</p>
+            <button class="btn btn-secondary" aria-label="View Sanitary Pads details" onclick="openPopup(
+              'Sanitary Pads',
+              'images/imagesproduct4.jpg.jpeg',
+              300,
+              '20 pieces pack | Long lasting | Ultra comfort | Skin friendly'
+            )">View Details</button>
+          </div>
+        </div>
+
+        <!-- HYGIENE KIT -->
+        <div class="card" data-category="hygiene" data-name="hygiene kit">
+          <div class="card-img-wrapper">
+            <img src="images/imagesproduct3.jpg.jpeg" alt="Daily protection kit containing face mask, hand sanitizer, and wipes" loading="lazy">
+          </div>
+          <div class="card-info">
+            <span class="category-tag">Hygiene</span>
+            <h3>Hygiene Kit</h3>
+            <p class="price">Rs. 700</p>
+            <button class="btn btn-secondary" aria-label="View Hygiene Kit details" onclick="openPopup(
+              'Hygiene Kit',
+              'images/imagesproduct3.jpg.jpeg',
+              700,
+              'Includes mask + sanitizer + wipes | Daily protection kit'
+            )">View Details</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP DETAILS MODAL -->
+  <div id="popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()" aria-label="Close Product Details">&times;</button>
+      
+      <div class="popup-layout">
+        <div class="popup-media">
+          <img id="popup-img" src="" alt="Product Image">
+        </div>
+        <div class="popup-details-info">
+          <h2 id="popup-title"></h2>
+          <p id="popup-price" class="popup-price"></p>
+          
+          <div class="details-section">
+            <h4>Product Specifications:</h4>
+            <ul id="popup-details" class="details-list"></ul>
+          </div>
+          
+          <!-- QUANTITY SELECTOR IN POPUP -->
+          <div class="quantity-control-wrapper">
+            <label for="popup-qty">Quantity:</label>
+            <div class="qty-selector">
+              <button class="qty-btn" aria-label="Decrease quantity" onclick="adjustPopupQty(-1)">-</button>
+              <input type="number" id="popup-qty" value="1" min="1" readonly aria-live="polite">
+              <button class="qty-btn" aria-label="Increase quantity" onclick="adjustPopupQty(1)">+</button>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary" onclick="addPopupProductToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDEOUT CART DRAWER -->
+  <div id="cart" class="cart" role="dialog" aria-modal="true" aria-labelledby="cart-heading">
+    <div class="cart-header">
+      <h2 id="cart-heading">Your Basket</h2>
+      <button class="close-cart" onclick="toggleCart()" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+    
+    <div id="cart-items" class="cart-items-container" aria-live="polite">
+      <!-- Dynamic cart items list -->
+    </div>
+    
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total:</span>
+        <span class="total-price">Rs. <span id="total">0</span></span>
+      </div>
+      <a id="whatsapp" class="btn checkout-btn" target="_blank" rel="noopener noreferrer" aria-label="Send order inquiry via WhatsApp">
+        <svg viewBox="0 0 24 24" width="20" height="20" class="whatsapp-icon" aria-hidden="true">
+          <path fill="currentColor" d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.978L2 22l5.188-1.361a9.94 9.94 0 0 0 4.82 1.244h.005c5.507 0 9.99-4.478 9.99-9.985A9.999 9.999 0 0 0 12.012 2zm5.718 14.158c-.312.88-1.536 1.578-2.13 1.625-.514.043-1.047.243-3.29-.687-2.868-1.185-4.69-4.108-4.833-4.3-1.127-1.493-1.923-3.23-1.923-4.98 0-1.97 1.01-2.92 1.374-3.286.312-.315.828-.48 1.274-.48.143 0 .265.007.366.012.3.013.447.03.645.457.243.524.83 2.012.9 2.158.07.147.118.32.02.515-.098.196-.148.312-.296.485-.148.173-.313.385-.447.514-.148.143-.303.3-.13.6.3.518.736 1.026 1.258 1.487.674.596 1.238 1.096 2.183 1.516.27.12.428.1.583-.08.17-.197.74-.86.938-1.155.196-.295.393-.246.655-.148.262.1.1.83.67 1.554a9.04 9.04 0 0 0 .546.548c.196.148.32.22.476.246.155.025.295-.008.435-.148z"/>
+        </svg>
+        Order via WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTACT & FOOTER -->
+  <section id="contact" class="section footer">
+    <div class="container footer-grid">
+      <div class="footer-brand fade">
+        <h2 class="logo">Daily<span>Care</span></h2>
+        <p>Premium healthcare and hygiene essentials delivered to your doorstep. Supporting clean and healthy living in Nepal.</p>
+        
+        <div class="footer-contact-info">
+          <h3>Contact Details</h3>
+          <p class="contact-method">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <a href="tel:9801915577" aria-label="Call DailyCare at 9801915577">9801915577</a>
+          </p>
+          <p class="contact-method">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Kathmandu, Nepal
+          </p>
+          <p class="contact-method">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <a href="mailto:info@dailycarenepal.com" aria-label="Email DailyCare at info@dailycarenepal.com">info@dailycarenepal.com</a>
+          </p>
+        </div>
+      </div>
+      
+      <!-- INTERACTIVE CONTACT FORM -->
+      <div class="footer-form fade">
+        <h3>Send us a Message</h3>
+        <form id="contact-form" onsubmit="handleContactSubmit(event)" novalidate>
+          
+          <!-- Anti-Spam Honeypot (invisible to screen readers & human users, catches bots) -->
+          <div style="display:none !important;" aria-hidden="true">
+            <label for="dailycare-honey">Do not fill this field if you are a human</label>
+            <input type="text" name="dailycare_honey" id="dailycare-honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="contact-name" name="name" required placeholder="Your full name" aria-required="true">
+            <span class="error-msg" id="error-name" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="contact-email" name="email" required placeholder="Your email address" aria-required="true">
+            <span class="error-msg" id="error-email" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="What is this about?">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="4" required placeholder="Write your message here..." aria-required="true"></textarea>
+            <span class="error-msg" id="error-message" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn" id="contact-submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="footer-links fade">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="legal.html">Terms & Privacy Policy</a>
+        <a href="legal.html#returns">Returns & Refunds</a>
+        <a href="404.html">Test 404 Error Page</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Daily Care Hub Nepal. All rights reserved.</p>
+    </div>
+  </section>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js" defer></script>
+</body>
+</html>

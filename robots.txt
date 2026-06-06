@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /legal.html
+Disallow: /404.html
+
+Sitemap: https://dailycarenepal.com/sitemap.xml
