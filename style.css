@@ -1439,3 +1439,416 @@ nav a:hover {
     padding: 30px 20px;
   }
 }
+
+/* ===== PREMIUM DARK THEME ENHANCEMENTS ===== */
+
+/* 1. ENHANCED DARK THEME COLORS & TYPOGRAPHY */
+:root {
+  --dark-bg: #0b0b0b;
+  --dark-secondary: #1a1a1a;
+  --dark-tertiary: #2a2a2a;
+  --text-light: #ffffff;
+  --text-secondary: #aaa;
+  --text-tertiary: #777;
+  --card-dark-bg: rgba(26, 26, 26, 0.8);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-dark-sm: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. DARK BODY STYLING */
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+body::before {
+  opacity: 0.08;
+}
+
+/* 3. ENHANCED PRODUCT CARD REFINEMENT */
+.card {
+  border-radius: 16px;
+  background: var(--card-dark-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-dark-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-dark);
+  border-color: rgba(30, 136, 229, 0.3);
+}
+
+.card-img-wrapper {
+  border-radius: 16px 16px 0 0;
+}
+
+.card img {
+  border-radius: 0;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  color: var(--text-light);
+}
+
+.card-info h3 {
+  color: var(--text-light);
+}
+
+.card-info p {
+  color: var(--text-secondary);
+}
+
+.price {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* 4. IMPROVED GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* 5. IMAGE ENHANCEMENTS */
+img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.popup-media img,
+.card-img-wrapper img,
+.cart-item-img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* 6. HERO SECTION ENHANCEMENT */
+.hero {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(30,136,229,0.35), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(66,165,245,0.35), transparent 45%),
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url('images/imageshero.jpg.jpeg') center/cover no-repeat;
+}
+
+.glass {
+  text-align: center;
+  transform: translateZ(0);
+}
+
+.hero-title,
+.hero-tagline {
+  color: var(--text-light);
+}
+
+/* 7. TYPOGRAPHY IMPROVEMENTS */
+body {
+  font-family: system-ui, -apple-system, sans-serif, 'Poppins';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.section-header h2 {
+  color: var(--text-light);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+}
+
+/* 8. MICRO INTERACTIONS */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transition: all 0.3s ease;
+}
+
+.card,
+.popup-content,
+.cart,
+nav a,
+.filter-btn,
+.search-box input {
+  transition: all 0.3s ease;
+}
+
+/* 9. HEADER & NAVIGATION DARK MODE */
+header {
+  background: rgba(11, 11, 11, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: var(--text-light);
+}
+
+nav a {
+  color: var(--text-secondary);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* 10. SEARCH & FILTER DARK STYLING */
+.search-box input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-light);
+}
+
+.search-box input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.search-box input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.search-icon {
+  color: var(--text-secondary);
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-secondary);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  color: var(--text-light);
+  border-color: var(--primary);
+}
+
+/* 11. POPUP DARK MODE */
+.popup-content {
+  background: var(--dark-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  box-shadow: var(--shadow-dark);
+}
+
+.popup-details-info h2 {
+  color: var(--text-light);
+}
+
+.popup-details-info p {
+  color: var(--text-secondary);
+}
+
+.details-section h4 {
+  color: var(--text-secondary);
+}
+
+.details-list li {
+  color: var(--text-light);
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+.close-btn:hover {
+  background: rgba(30, 136, 229, 0.15);
+  color: var(--primary);
+}
+
+/* 12. CART DARK MODE */
+.cart {
+  background: var(--dark-secondary);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
+  color: var(--text-light);
+}
+
+.cart-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-header h2 {
+  color: var(--text-light);
+}
+
+.cart-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cart-item-info h4 {
+  color: var(--text-light);
+}
+
+.cart-item-info .item-price {
+  color: var(--primary);
+}
+
+.total-row {
+  color: var(--text-secondary);
+}
+
+.total-row .total-price {
+  color: var(--text-light);
+}
+
+.close-cart {
+  color: var(--text-secondary);
+}
+
+.close-cart:hover {
+  color: var(--primary);
+}
+
+/* 13. FOOTER DARK MODE REFINEMENT */
+.footer {
+  background: var(--dark-secondary);
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand .logo {
+  color: var(--text-light);
+}
+
+.footer-brand p {
+  color: var(--text-secondary);
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-form h3 {
+  color: var(--text-light);
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+.contact-method {
+  color: var(--text-secondary);
+}
+
+.contact-method a {
+  color: var(--text-secondary);
+}
+
+.contact-method a:hover {
+  color: var(--primary);
+}
+
+.contact-method svg {
+  color: var(--primary);
+}
+
+.footer-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group label {
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-light);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-tertiary);
+}
+
+/* 14. TOAST NOTIFICATIONS DARK MODE */
+.toast {
+  background: var(--dark-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-dark);
+  border-left-color: var(--primary);
+}
+
+/* 15. MOBILE RESPONSIVE DARK MODE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  nav {
+    background: rgba(11, 11, 11, 0.96);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav a {
+    color: var(--text-light);
+  }
+  
+  .cart {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 16. QUANTITY SELECTOR DARK MODE */
+.qty-selector {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.qty-selector input {
+  color: var(--text-light);
+}
+
+.qty-btn {
+  color: var(--primary);
+}
+
+.qty-btn:hover {
+  background: rgba(30, 136, 229, 0.1);
+}
+
+.quantity-control-wrapper label {
+  color: var(--text-light);
+}
