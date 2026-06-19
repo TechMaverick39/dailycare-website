@@ -1852,3 +1852,227 @@ nav a:hover {
 .quantity-control-wrapper label {
   color: var(--text-light);
 }
+
+/* ===== FORCED DARK THEME OVERRIDE BLOCK ===== */
+/* This block forces dark theme visibility by overriding existing styles */
+
+/* 1. FORCE BODY DARK BACKGROUND (Override gradient) */
+body {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}
+
+/* 2. FORCE CARD DARK BACKGROUNDS */
+.card {
+  background: #1a1a1a !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.card:hover {
+  background: #252525 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+.card-info {
+  color: #ffffff !important;
+}
+
+.card-info h3 {
+  color: #ffffff !important;
+}
+
+.card-info p {
+  color: #aaa !important;
+}
+
+.price {
+  color: #1e88e5 !important;
+}
+
+.category-tag {
+  color: #1e88e5 !important;
+}
+
+/* 3. FORCE HEADER DARK MODE */
+header {
+  background: rgba(11, 11, 11, 0.92) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.logo {
+  color: #ffffff !important;
+}
+
+nav a {
+  color: #aaa !important;
+}
+
+nav a:hover {
+  color: #1e88e5 !important;
+}
+
+/* 4. FORCE SEARCH & FILTER DARK */
+.search-box input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.search-box input::placeholder {
+  color: #777 !important;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #aaa !important;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #1e88e5 !important;
+  color: #ffffff !important;
+  border-color: #1e88e5 !important;
+}
+
+/* 5. FORCE POPUP DARK MODE */
+.popup-content {
+  background: #1a1a1a !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.popup-details-info h2 {
+  color: #ffffff !important;
+}
+
+.popup-details-info p {
+  color: #aaa !important;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #aaa !important;
+}
+
+/* 6. FORCE CART DARK MODE */
+.cart {
+  background: #1a1a1a !important;
+  border-left-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.cart-header h2 {
+  color: #ffffff !important;
+}
+
+.cart-item {
+  border-bottom-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.cart-item-info h4 {
+  color: #ffffff !important;
+}
+
+.total-row .total-price {
+  color: #ffffff !important;
+}
+
+/* 7. FORCE FOOTER DARK MODE */
+.footer {
+  background: #1a1a1a !important;
+  color: #aaa !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-brand .logo {
+  color: #ffffff !important;
+}
+
+.footer-brand p {
+  color: #aaa !important;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-form h3 {
+  color: #ffffff !important;
+}
+
+.footer-links a {
+  color: #aaa !important;
+}
+
+.footer-links a:hover {
+  color: #1e88e5 !important;
+}
+
+/* 8. FORCE FORM DARK MODE */
+.footer-form {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-group label {
+  color: #ffffff !important;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777 !important;
+}
+
+/* 9. FORCE SECTION HEADERS */
+.section-header h2 {
+  color: #ffffff !important;
+}
+
+.section-header p {
+  color: #aaa !important;
+}
+
+/* 10. FORCE TEXT COLORS */
+.card-img-wrapper {
+  background: #2a2a2a !important;
+}
+
+.popup-media {
+  background: #2a2a2a !important;
+}
+
+.cart-item-img {
+  background: #2a2a2a !important;
+}
+
+/* 11. FORCE QUANTITY SELECTOR */
+.qty-selector {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.qty-selector input {
+  color: #ffffff !important;
+}
+
+.quantity-control-wrapper label {
+  color: #ffffff !important;
+}
+
+/* 12. FORCE HERO TEXT */
+.hero-title,
+.hero-tagline {
+  color: #ffffff !important;
+}
+
+/* 13. REMOVE FLOATING LOGO VISIBILITY */
+body::before {
+  opacity: 0.05 !important;
+}
