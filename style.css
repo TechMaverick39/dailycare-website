@@ -2076,3 +2076,53 @@ nav a:hover {
 body::before {
   opacity: 0.05 !important;
 }
+/* ===== FORCE DARK MODE OVERRIDE (FINAL FIX) ===== */
+
+html, body {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}
+
+/* Remove gradient completely */
+body {
+  background-image: none !important;
+}
+
+/* HEADER */
+header {
+  background: rgba(15,15,15,0.95) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* CARDS */
+.card {
+  background: rgba(20,20,20,0.95) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+/* TEXT FIX */
+.card-info h3,
+.price,
+nav a,
+.section-header h2 {
+  color: #ffffff !important;
+}
+
+/* SEARCH + FILTER */
+.search-box input,
+.filter-btn {
+  background: rgba(255,255,255,0.08) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+}
+
+/* GRID SPACING */
+.grid {
+  gap: 25px !important;
+}
+
+/* BODY BACKGROUND IMAGE REDUCE */
+body::before {
+  opacity: 0.05 !important;
+}
