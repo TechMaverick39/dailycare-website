@@ -2126,3 +2126,45 @@ nav a,
 body::before {
   opacity: 0.05 !important;
 }
+
+html, body {
+  background: #0b0b0b !important;
+  color: #ffffff !important;
+}
+
+body {
+  background-image: none !important;
+}
+
+header {
+  background: rgba(15,15,15,0.95) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.card {
+  background: rgba(20,20,20,0.95) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.card-info h3,
+.price,
+nav a,
+.section-header h2 {
+  color: #ffffff !important;
+}
+
+.search-box input,
+.filter-btn {
+  background: rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+}
+
+.grid {
+  gap: 25px !important;
+}
+
+body::before {
+  opacity: 0.05 !important;
+}
