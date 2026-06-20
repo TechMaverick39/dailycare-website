@@ -496,3 +496,54 @@ function trackAnalyticsEvent(category, action, label = "") {
     // Local debug logger (will display in development environment console logs)
     console.log(`[Analytics Event Logged] Category: ${category} | Action: ${action} | Label: ${label}`);
 }
+
+/* ==========================================================================
+   SCROLL-BASED 3D SHOWCASE
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const section = document.getElementById("scroll-3d-showcase");
+    if (!section) return;
+
+    const card = section.querySelector(".scroll-3d-card");
+    if (!card) return;
+
+    let ticking = false;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const updateScrollCard = () => {
+        const rect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (rect.bottom < 0 || rect.top > viewportHeight) {
+            ticking = false;
+            return;
+        }
+
+        const totalTravel = viewportHeight + rect.height;
+        const progress = clamp((viewportHeight - rect.top) / totalTravel, 0, 1);
+        const isMobile = window.innerWidth <= 768;
+
+        const startRotate = isMobile ? 14 : 18;
+        const rotateX = startRotate * (1 - progress);
+        const startScale = isMobile ? 0.86 : 0.9;
+        const scale = startScale + progress * (1 - startScale);
+        const translateStart = isMobile ? 54 : 70;
+        const translateEnd = isMobile ? -44 : -72;
+        const translateY = translateStart + progress * (translateEnd - translateStart);
+
+        card.style.transform = `rotateX(${rotateX}deg) scale(${scale}) translateY(${translateY}px)`;
+        ticking = false;
+    };
+
+    const requestUpdate = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateScrollCard);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    requestUpdate();
+});

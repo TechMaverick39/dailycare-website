@@ -2076,6 +2076,7 @@ nav a:hover {
 body::before {
   opacity: 0.05 !important;
 }
+
 /* ===== FORCE DARK MODE OVERRIDE (FINAL FIX) ===== */
 
 html, body {
@@ -2167,4 +2168,88 @@ nav a,
 
 body::before {
   opacity: 0.05 !important;
+}
+
+/* Scroll-based 3D showcase */
+.scroll-3d-section {
+  min-height: 120vh !important;
+  padding: 110px 20px 130px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+  z-index: 1 !important;
+  background: #0b0b0b !important;
+}
+
+.scroll-3d-wrap {
+  width: min(1120px, 100%) !important;
+  margin: 0 auto !important;
+}
+
+.scroll-3d-header {
+  max-width: 760px !important;
+  margin: 0 auto 48px !important;
+  text-align: center !important;
+}
+
+.scroll-3d-header h2 {
+  margin: 0 0 14px !important;
+  color: #ffffff !important;
+  font-size: clamp(2.2rem, 6vw, 5rem) !important;
+  line-height: 1.05 !important;
+}
+
+.scroll-3d-header p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.76) !important;
+  font-size: clamp(1rem, 2vw, 1.22rem) !important;
+}
+
+.scroll-3d-stage {
+  perspective: 1200px !important;
+  transform-style: preserve-3d !important;
+}
+
+.scroll-3d-card {
+  width: min(940px, 100%) !important;
+  height: clamp(300px, 54vw, 580px) !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  border: 4px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 30px !important;
+  background: #1f1f1f !important;
+  box-shadow:
+    0 20px 36px rgba(0, 0, 0, 0.42),
+    0 68px 110px rgba(0, 0, 0, 0.34) !important;
+  transform: rotateX(18deg) scale(0.9) translateY(70px) !important;
+  transform-origin: center center !important;
+  transition: transform 120ms linear !important;
+  will-change: transform !important;
+}
+
+.scroll-3d-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+  .scroll-3d-section {
+    min-height: 100vh !important;
+    padding: 80px 16px 100px !important;
+  }
+
+  .scroll-3d-header {
+    margin-bottom: 32px !important;
+  }
+
+  .scroll-3d-card {
+    height: clamp(260px, 70vw, 420px) !important;
+    border-width: 2px !important;
+    border-radius: 22px !important;
+    transform: rotateX(14deg) scale(0.86) translateY(54px) !important;
+  }
 }
